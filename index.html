@@ -11,6 +11,7 @@
                 <img src="background.jpg" alt="spiral leaves">
                 <div>
                     <div class="logo">
+                        <div class="logo-bg"></div>
                         <img src="odin-lined.png" alt="Odin Project Logo">
                         <span>ODIN</span>
                         <p class="credit">
@@ -36,41 +37,49 @@
                 </div>
                 <div class="mid">
                     <h3>Let's do this!</h3>
-                    <form action="" id="form-a">
-                        <div class="mid-left">
-                            <div>
-                                <label for="fame">First Name</label>
-                                <input type="text" id="fname" name="fname" required>
+                    <div class="inner-mid">
+                        <form action="" id="form-a">
+                            <div class="row-1">
+                                <div>
+                                    <label for="fname">FIRST NAME</label>
+                                    <input type="text" id="fname" name="fname" 
+                                    maxlength="30" required>
+                                </div>
+    
+                                <div>
+                                    <label for="lname">LAST NAME</label>
+                                    <input type="text" id="lname" name="lname" 
+                                    maxlength="30" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row-2">
+                                <div>
+                                    <label for="email">EMAIL</label>
+                                    <input type="email" id="email" name="email" 
+                                    placeholder="john@example.com" required>
+                                </div>
+    
+                                <div>
+                                    <label for="phone">PHONE NUMBER</label>
+                                    <input type="tel" id="phone" name="phone" 
+                                    pattern="^([0-9]{10}|[0-9]{3}(-|\.| )[0-9]{3}(-|\.| )[0-9]{4})$" required>
+                                </div>
                             </div>
 
-                            <div>
-                                <label for="email">Email</label>
-                                <input type="text" id="email" name="email" required>
+                            <div class="row-3">
+                                <div>
+                                    <label for="password">PASSWORD</label>
+                                    <input type="password" id="password" name="password" required>
+                                </div>
+    
+                                <div>
+                                    <label for="confirm">CONFIRM PASSWORD</label>
+                                    <input type="password" id="confirm" name="confirm" required>
+                                </div>
                             </div>
-
-                            <div>
-                                <label for="password">Password</label>
-                                <input type="text" id="lname" name="lname" required>
-                            </div>
-                        </div>
-                        
-                        <div class="mid-right">
-                            <div>
-                                <label for="lname">Last0-Name</label>
-                                <input type="text" id="lname" name="lname" required>
-                            </div>
-
-                            <div>
-                                <label for="lname">Las1- Name</label>
-                                <input type="text" id="lname" name="lname" required>
-                            </div>
-
-                            <div>
-                                <label for="lname">Last2- Name</label>
-                                <input type="text" id="lname" name="lname" required>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
                 <div class="bot">
                     <button form="form-a" type="submit">Create Account</button>

@@ -3,6 +3,11 @@
     src: url(Norse-Bold.otf);
 }
 
+* {
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 :root {
     --left-sidebar-width: 35vw;
     --right-sidebar-width: calc(100vw - var(--left-sidebar-width));
@@ -19,8 +24,8 @@ div[class="left"] {
     color: white;
 }
 
-div>img {
-    height: 100vh;
+div[class='left']>img {
+    height: calc(var(--top-bot-height) * 2 + 30vh);
     width: var(--left-sidebar-width);
 }
 
@@ -69,12 +74,40 @@ p[class='message'] {
     width: calc(var(--right-sidebar-width) - 20vw);
     font-size: 16px;
     padding: 10px 40px;
-    margin-top: 60px;
+    margin-top: 100px;
     font-weight: 600;
 }
 
 div[class='mid'] {
+    appearance: none;
     background-color: white;
     height: 30vh;
     display: flex;
+    flex-direction: column;
+}
+
+div[class='mid'] div {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+
+div[class='bot'] {
+    padding: 20px 40px;
+}
+
+input {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    width: calc(var(100vw - --right-sidebar-width));
+    gap: 10px;
+}
+
+button {
+    background-color: #596D48;
+    color: aliceblue;
+    padding: 10px 40px;
+    border-radius: 8px;
+    margin-bottom: -10px;
 }
